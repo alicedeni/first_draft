@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание профиля. О себе</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header_homeet">
+        <div class="header_elem">
+            <img class="main_logo" src="img/homeet.png" alt="homeet logo">
+            <form>
+                <button class="button1">Выйти из аккаунта</button>
+            </form>
+        </div>
+    </header>
+    <main class="main_body">
+        <form>
+            <button class="button1">На главную</button>
+        </form>
+        <div class="making_profile_title">
+            <h1>Создание профиля</h1>
+            <p class="gray_text">/ О себе</p>
+        </div>
+        <div class="line"></div>
+        <div class="col">
+        <div class="all">
+        <div class="main_about">
+            <div class="uploading_photo">
+                <p><b>Аватар профиля</b></p>
+                <form>
+                    <label for="image" class="button2">Загрузить
+                        <input name="image" id="image" type="file" style="display:none" accept=".jpg, .jpeg, .png">
+                    </label>
+                </form>
+                <p class="gray_text">Загрузите фотографию весом не более 10 мб</p>
+            </div>
+            <form>
+                <input class="inputt" name="name" id="name" type="text" placeholder="Имя и фамилия">
+            </form>
+            <form class="variants">
+                <input class="radio" name="gender" id="male" value="male" type="radio">
+                <label for="male" class="variant">Парень</label>
+                <input class="radio" name="gender" id="female" value="female" type="radio">
+                <label for="female" class="variant">Девушка</label>
+            </form>
+            <form>
+                <input class="inputtd" name="date" id="date" type="text" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='tatx')">
+            </form> 
+            <form>
+                <input class="inputt" name="telegram" id="telegram" type="text" placeholder="Телеграм">
+            </form>
+            <form>
+                <input class="inputt" name="number" id="number" type="tel" placeholder="Номер телефона">
+            </form>
+            <div>
+                <form>
+                    <textarea class="inputta" name="textarea" id="textarea" cols="15" rows="5" placeholder="О себе"></textarea>
+                </form>
+                <p class="comment">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</p>
+            </div>
+        </div>
+        <div class="future_profile_all">
+            <p style="margin-bottom: 24px;">Так будет выглядеть твоя будущая страница</p>
+            <div class="future_profile">
+                <div class="photo_in_profile">
+                    <div class="border_photo"></div>
+                    <form>
+                        <button class="button_under_photo">Показать контакты</button>
+                    </form>
+                </div>
+                <div class="about_person">
+                    <p><b>Имя Фамилия</b></p>
+                    <div class="main_info">
+                        <p class="small">Пол</p>
+                        <p class="small">Возраст</p>
+                        <p class="smth"></з>
+                    </div>
+                    <p class="smth"></p>
+                    <div class="about">
+                        <p class="comment_about">Описание</p>
+                        <button class="turn_button">Развернуть</button>
+                    </div>
+                    <p class="border_for_info">
+                    </p>
+                </div>
+            </div>
+            <div class="notice">
+                <div>
+                    <p><b>Мы совсем ничего про тебя не знаем</b></p>
+                    <p>Расскажи о себе.<br>Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>
+                </div>
+                    <img class="smile" src="img/smile.jpg" width="25" 
+                    height="22" alt="sad face">
+            </div>
+            <div class="continue">
+                <div></div>
+                <form>
+                    <button class="button2">Продолжить</button>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="email">Support@hommet.com</p>
+        <p>Техническая поддержка</p>
+        <div class = "info">
+            <div class="info_text">
+                <p>О сервисе</p>
+                <p>Контакты</p>
+                <p>Политика конфиденциальности</p>
+            </div>
+            <div>
+                <a href="https://t.me/homeetHSE"><img src="img/тг.png" width="50" 
+                height="50" alt="telegram"></a>
+                <a href="https://vk.com/ruhomeet"><img src="img/вк.png" width="50" 
+                height="50" alt="vk"></a>
+            </div>
+        </div>
+        <br>
+        <div class="line"></div>
+        <br>
+        <div class="optional_com">
+            <p class="comment_footer">Предложение не является публичной овертой. <br>Сервис не несет ответственности за действия пользователей, достоверность информации и т.д.</p>
+            <p class="comment_footer">Сделано в <b>бвср</b></p>
+        </div>
+    </footer>
+</body>
