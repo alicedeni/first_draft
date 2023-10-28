@@ -36,52 +36,41 @@
                 </form>
                 <form class="range-slider">
                 <label for="range" class="label-range">Курс</label>
-                <input class="slider" id="range" type="range" name="range" min="1" max="5" step="1" value="1" onchange="$('#sizevalue').text($('#range').val());">
-                <div id="sizevalue">1</div>
+                <input class="slider" id="range" type="range" name="range" min="1" max="6" step="1" value="1" onchange="$('#sizevalue').text($('#range').val());" onclick='eventRange()'>
                 </form>
                 <form>
-                    <input type="checkbox" class="ended_student" id="ended_student">
+                    <input type="checkbox" class="ended_student" id="ended_student" onchange='eventGalka()'>
                     <label for="ended_student" class="galka"> Уже окончил Вышку</label>
                 </form>
-                <div>
-                    <p>Ступень образования</p>
-                    <div class="gray_list">
-                        <input class="inputt" name="name" id="step" type="text" placeholder="Ступень образования" disabled>
-                        <form>
-                            <select class="selector">
-                                <option></option>
-                                <option value="">Бакалавриат</option>
-                                <option value="">Магистратура</option>
-                            </select>
-                        </form>
+                <p>Ступень образования</p>
+                <div class="dropdown">
+                    <p onclick="myFunction()" class="dropbtn" id="step1">Ступень образования</p>
+                      <div id="myDropdown" class="dropdown-content">
+                        <p class="v1">Бакалавриат</p>
+                        <p class="v1">Магистратура</p>
+                      </div>
+                    </div>
+                <p>Факультет</p>
+                <div class="dropdown2">
+                    <p onclick="myFunction2()" class="dropbtn2" id="step2">Факультет</p>
+                      <div id="myDropdown2" id="dropdown-content2" class="dropdown-content2">
+                        <p class="v2">Московский институт электроники и математики</p>
+                        <p class="v2">Высшая школа бизнеса</p>
+                        <p class="v2">Факультет компьютерных наук</p>
                     </div>
                 </div>
-                <div>
-                    <p>Факультет</p>
-                    <div class="gray_list">
-                        <input class="inputt" name="name" id="fack" type="text" placeholder="Факультет" disabled>
-                        <form>
-                            <select class="selector">
-                                <option></option>
-                                <option value="">Московский институт электроники и математики</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-                <div>
-                    <p>Образовательная программа</p>
-                    <div class="gray_list">
-                        <input class="inputt" name="name" id="program" type="text" placeholder="Образовательная программа" disabled>
-                        <form>
-                            <select class="selector">
-                                <option></option>
-                                <option value="">Информатика и вычислительная техника</option>
-                            </select>
-                        </form>
+                <p>Образовательная программа</p>
+                <div class="dropdown3">
+                    <p onclick="myFunction3()" class="dropbtn3" id="step3">Образовательная программа</p>
+                      <div id="myDropdown3" id="dropdown-content3" class="dropdown-content3">
+                        <p class="v3">Информатика и вычислительная техника</p>
+                        <p class="v3">Информационная безопасность</p>
+                        <p class="v3">Прикладная математика</p>
+                        <p class="v3">Прикладная математика и информатика</p>
                     </div>
                 </div>
                 <form>
-                    <input class="inputt" name="name" id="name" type="text" placeholder="Работа">
+                    <input class="inputt" name="name" id="name" type="text" placeholder="Работа" onchange='eventWork(this.value)'>
                 </form>
             </div>
             <div class="future_profile_all">
@@ -96,11 +85,18 @@
                     <div class="about_person">
                         <p><b>Имя Фамилия</b></p>
                         <div class="main_info">
-                            <p class="small">Пол</p>
-                            <p class="small">Возраст</p>
-                            <p class="small">Образование</p>
+                            <p class="small" id="gender2">Пол</p>
+                            <div class="point"></div>
+                            <p class="small" id="age2">Возраст</p>
+                            <div class="point"></div>
+                            <div class="education2">
+                                <p class="smalle" id="education21"></p>
+                                <p class="smalle" id="education22"></p>
+                                <p class="smalle" id="education23"></p>
+                                <p class="smalle" id="education24"></p>
+                            </div>
                         </div>
-                        <div class="smth"></div>
+                        <div class="smth" id="work2"></div>
                         <div class="about">
                             <p class="comment_about">Описание</p>
                             <button class="turn_button">Развернуть</button>
@@ -126,6 +122,7 @@
             </div>
             </div>
             </div>
+            <script src="./js/script2.js"></script>
     </main>
     <footer class="footer">
         <p class="email">Support@hommet.com</p>
