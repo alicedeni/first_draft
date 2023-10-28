@@ -31,32 +31,38 @@
                 <p><b>Аватар профиля</b></p>
                 <form>
                     <label for="image" class="button2">Загрузить
-                        <input name="image" id="image" type="file" style="display:none" accept=".jpg, .jpeg, .png">
+                        <input name="image" id="image" type="file" style="display:none" accept=".jpg, .jpeg, .png" onchange="previewFile()">
                     </label>
                 </form>
                 <p class="gray_text">Загрузите фотографию весом не более 10 мб</p>
             </div>
             <form>
-                <input class="inputt" name="name" id="name" type="text" placeholder="Имя и фамилия">
+                <input class="inputt" name="name" id="name" type="text" placeholder="Имя и фамилия" onchange='eventName(this.value)'>
+                <p class="error" id="name_format">Неверный формат имени</p>
+                <p class="error" id="name_f">Неверный ф</p>
             </form>
-            <form class="variants">
-                <input class="radio" name="gender" id="male" value="male" type="radio">
+            
+            <form class="variants" id="variants">
+                <input class="radio" name="gender" id="male" value="male" type="radio" onchange='eventGender1(this.value)'>
                 <label for="male" class="variant">Парень</label>
-                <input class="radio" name="gender" id="female" value="female" type="radio">
+                <input class="radio" name="gender" id="female" value="female" type="radio" onchange='eventGender2(this.value)'>
                 <label for="female" class="variant">Девушка</label>
             </form>
             <form>
-                <input class="inputtd" name="date" id="date" type="text" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='tatx')">
+                <input class="inputtd" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" name="date" id="datetime-local" type="text" placeholder="Дата рождения" onfocus="(this.type='date')"  onchange='eventDate(this.value)'>
+                <p class="error">Неверный формат даты</p>
             </form> 
             <form>
-                <input class="inputt" name="telegram" id="telegram" type="text" placeholder="Телеграм">
+                <input class="inputt" name="telegram" id="telegram" type="text" placeholder="Телеграм"  onchange='eventNickName(this.value)'>
+                <p class="error" id="nick_format">Неверный формат никнейма</p>
             </form>
             <form>
-                <input class="inputt" name="number" id="number" type="tel" placeholder="Номер телефона">
+                <input class="inputt" name="number" id="number" type="tel" placeholder="Номер телефона" onchange='eventNumber(this.value)'>
+                <p class="error" id="number_format">Неверный формат номера телефона</p>
             </form>
             <div>
                 <form>
-                    <textarea class="inputta" name="textarea" id="textarea" cols="15" rows="5" placeholder="О себе"></textarea>
+                    <textarea class="inputta" name="textarea" id="textarea" cols="15" rows="5" placeholder="О себе" onchange='eventAboutMyself(this.value)'></textarea>
                 </form>
                 <p class="comment">Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)</p>
             </div>
@@ -65,23 +71,27 @@
             <p style="margin-bottom: 24px;">Так будет выглядеть твоя будущая страница</p>
             <div class="future_profile">
                 <div class="photo_in_profile">
-                    <div class="border_photo"></div>
+                    <img class="border_photo" id="preview_profile" src="" >
                     <form>
-                        <button class="button_under_photo">Показать контакты</button>
+                        <button class="button_under_photo" onclick="contacts()" type=button>Показать контакты</button>
+                        <p id="telegram2"></p>
+                        <p id="number2"></p>
                     </form>
                 </div>
                 <div class="about_person">
-                    <p><b>Имя Фамилия</b></p>
+                    <p id="name2"></p>
                     <div class="main_info">
-                        <p class="small">Пол</p>
-                        <p class="small">Возраст</p>
-                        <p class="smth"></з>
+                        <p class="small" id="gender2"></p>
+                        <div class="point"></div>
+                        <p class="small" id="age2"></p>
+                        <div class="point"></div>
+                        <p class="smth"></p>
                     </div>
                     <p class="smth"></p>
-                    <div class="about">
-                        <p class="comment_about">Описание</p>
-                        <button class="turn_button">Развернуть</button>
-                    </div>
+                    <form class="about">
+                        <div class="comment_about" id="comment_about2">Описание</div>
+                        <button class="turn_button" type=button onclick="turnAbout()">Развернуть</button>
+                    </form>
                     <p class="border_for_info">
                     </p>
                 </div>
@@ -103,6 +113,7 @@
         </div>
         </div>
         </div>
+        <script src="./js/script1.js"></script>
     </main>
     <footer class="footer">
         <p class="email">Support@hommet.com</p>
