@@ -205,6 +205,7 @@ h1 {
     box-shadow: 0px 1.5px 4.5px 0px rgba(0, 0, 0, 0.5);
     padding: 12px 16px;
     display: flex;
+    max-width: 630px;
     margin-bottom: 24px;
     flex-direction: row;
     gap: 20px;
@@ -264,7 +265,8 @@ h1 {
 .about_person {
     display: flex;
     flex-direction: column;
-    gap: 10px;   
+    gap: 10px;
+    justify-content: flex-end;
 }
 
 .smth {
@@ -281,14 +283,16 @@ h1 {
     gap: 10px;   
 }
 
-.comment_about {
-    color: #6a6a6a;
-    font-size: 14px;
-    width: 250px;
+#comment_about2 {
+  width: 300px;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 .small {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .about {
@@ -327,4 +331,30 @@ input:checked + .variant:before {
     display: flex;
     flex-direction: row;
     gap:20px;
+}
+
+.point {
+    height: 5px;
+    width: 5px;
+    background-color: #f1f1f1; 
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+
+#name_format {
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+
+#telegram2 {
+    visibility: hidden;
+}
+
+#number2 {
+    visibility: hidden;
 }
