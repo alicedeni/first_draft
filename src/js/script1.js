@@ -126,7 +126,7 @@ function eventNumber(value) {
                 document.querySelector('#number').style.border = '0px solid red';
                 document.querySelector('#number2').textContent = value; 
             } else {
-                document.querySelector('#tel_format').style.visibility = 'visible'; 
+                document.querySelector('#number_format').style.visibility = 'visible'; 
                 document.querySelector('#number').style.border = '1px solid red';
             }
         }
@@ -136,7 +136,7 @@ function eventNumber(value) {
         }
     } 
     else  {
-        document.querySelector('#tel_format').style.visibility = 'visible';  
-        document.querySelector('#tel').style.border = '1px solid red';
+        document.querySelector('#number_format').style.visibility = 'visible';  
+        document.querySelector('#number').style.border = '1px solid red';
     }
 }
